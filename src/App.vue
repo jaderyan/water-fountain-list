@@ -14,17 +14,21 @@
         </div>
       </div>
     </main>
+    <app-footer />
   </div>
 </template>
 
 <script>
 import Fountain from "./components/Fountain";
+import Footer from "./components/Footer";
+
 import API from "./service/api";
 
 export default {
   name: "app",
   components: {
-    Fountain
+    Fountain,
+    "app-footer": Footer
   },
   data() {
     return {
@@ -37,5 +41,5 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
 </style>
