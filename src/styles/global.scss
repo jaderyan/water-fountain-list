@@ -1,0 +1,10 @@
+@import "./mixins";
+@import "./colours";
+
+a {
+  color: $razzmatazz;
+
+  &:hover {
+    color: $camelot;
+  }
+}
