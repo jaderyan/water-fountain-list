@@ -75,5 +75,5 @@ export default {
 <style>
 @import "../../node_modules/leaflet/dist/leaflet.css";
 @import "../../node_modules/leaflet.awesome-markers/dist/leaflet.awesome-markers.css";
-@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css";
+@import "https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css";
 </style>
