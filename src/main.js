@@ -6,12 +6,13 @@ import {
   faLinkedin,
   faGithub
 } from "@fortawesome/free-brands-svg-icons";
+import { faTint } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import L from "leaflet";
 
 import "./../node_modules/bulma/css/bulma.css";
 
-library.add(faTwitter, faLinkedin, faGithub);
+library.add(faTwitter, faLinkedin, faGithub, faTint);
 
 Vue.config.productionTip = false;
 
