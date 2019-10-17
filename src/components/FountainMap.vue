@@ -14,6 +14,7 @@
         v-for="fountain in fountains"
         v-bind:key="fountain.id"
         :lat-lng="latLang(fountain)"
+        :icon="icon"
         @click="selectFountain(fountain)"
       />
     </l-map>
@@ -21,8 +22,9 @@
 </template>
 
 <script>
-import { latLng } from "leaflet";
-import { LMap, LTileLayer, LMarker } from "vue2-leaflet";
+import L, { latLng, icon } from "leaflet";
+import { LMap, LTileLayer, LMarker, LIcon } from "vue2-leaflet";
+import { AwesomeMarkers } from "leaflet.awesome-markers";
 
 export default {
   name: "fountain-map",
@@ -33,7 +35,8 @@ export default {
   components: {
     LMap,
     LTileLayer,
-    LMarker
+    LMarker,
+    LIcon
   },
   data() {
     return {
@@ -47,7 +50,12 @@ export default {
         zoomSnap: 0.5,
         attributionControl: false
       },
-      showMap: true
+      showMap: true,
+      icon: L.AwesomeMarkers.icon({
+        icon: "tint",
+        prefix: "fa",
+        markerColor: "cadetblue"
+      })
     };
   },
   methods: {
@@ -64,6 +72,8 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 @import "../../node_modules/leaflet/dist/leaflet.css";
+@import "../../node_modules/leaflet.awesome-markers/dist/leaflet.awesome-markers.css";
+@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css";
 </style>

@@ -1,5 +1,5 @@
 @import "./mixins";
-@import "./colours";
+@import "./colors";
 
 a {
   color: $razzmatazz;
@@ -7,4 +7,8 @@ a {
   &:hover {
     color: $camelot;
   }
+}
+
+.awesome-marker i {
+  font-size: pxtorem(20px);
 }
