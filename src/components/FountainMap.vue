@@ -22,8 +22,9 @@
 </template>
 
 <script>
-import L, { latLng, icon } from "leaflet";
-import { LMap, LTileLayer, LMarker, LIcon } from "vue2-leaflet";
+import L, { latLng } from "leaflet";
+import { LMap, LTileLayer, LMarker } from "vue2-leaflet";
+// eslint-disable-next-line
 import { AwesomeMarkers } from "leaflet.awesome-markers";
 
 export default {
@@ -35,8 +36,7 @@ export default {
   components: {
     LMap,
     LTileLayer,
-    LMarker,
-    LIcon
+    LMarker
   },
   data() {
     return {
